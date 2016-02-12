@@ -38,8 +38,5 @@
   },
   "dependencies": {
     "glob": "^7.0.0"
-  },
-  "peerDependencies": {
-    "stylus": "1.x"
   }
 }
