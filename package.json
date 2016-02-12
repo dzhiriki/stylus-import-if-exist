@@ -1,12 +1,12 @@
 {
   "name": "stylus-import-if-exist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stylus import which does not fail when import non-exist files",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "build": "babel src --out-dir dist",
-    "coverage": "isparta cover _mocha index.js --include-all-sources -- --require babel-core/register",
+    "coverage": "isparta cover -x dist/*.js --include-all-sources _mocha -- --require babel-core/register",
     "prepublish": "npm run build",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info"
