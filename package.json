@@ -1,0 +1,45 @@
+{
+  "name": "stylus-import-if-exist",
+  "version": "1.0.0",
+  "description": "Stylus import which does not fail when import non-exist files",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register",
+    "build": "babel src --out-dir dist",
+    "coverage": "isparta cover _mocha index.js --include-all-sources -- --require babel-core/register",
+    "prepublish": "npm run build",
+    "precoveralls": "npm run coverage",
+    "coveralls": "coveralls < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dzhiriki/stylus-import-if-exist.git"
+  },
+  "keywords": [
+    "stylus",
+    "import"
+  ],
+  "author": "Aleksandr Petrov <dzhiriki@gmail.com> (https://github.com/dzhiriki)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzhiriki/stylus-import-if-exist/issues"
+  },
+  "homepage": "https://github.com/dzhiriki/stylus-import-if-exist#readme",
+  "devDependencies": {
+    "babel": "^6.5.1",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.6",
+    "isparta": "^4.0.0",
+    "mocha": "^2.4.5",
+    "stylus": "^0.53.0"
+  },
+  "dependencies": {
+    "glob": "^7.0.0"
+  },
+  "peerDependencies": {
+    "stylus": "1.x"
+  }
+}
