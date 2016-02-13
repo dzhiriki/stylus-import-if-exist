@@ -9,6 +9,8 @@ export default () => (style) => {
     const wildcard = path.join(dirname, file.val).replace(/(\.styl)?$/, '.styl');
     const files = glob.sync(wildcard);
 
+    result.scope = false;
+
     files.forEach((file) => {
       result.push(
         new nodes.Import(
